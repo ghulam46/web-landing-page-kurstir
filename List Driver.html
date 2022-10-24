@@ -1,0 +1,507 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <!-- Bootstrap CSS -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+        
+        <!-- Poppins Font -->
+        <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
+
+        <!-- Font Awesome -->
+        <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
+        
+        <title>List Driver</title>
+        <style>
+            body{
+                background:#eee;    
+            }
+            a {
+                color: #f96332;
+            }
+            .m-t-5{
+                margin-top: 5px;   
+            }
+            .card {
+                background: #fff;
+                margin-bottom: 30px;
+                transition: .5s;
+                border: 0;
+                border-radius: .1875rem;
+                display: inline-block;
+                position: relative;
+                width: 100%;
+                box-shadow: none;
+            }
+            .card .body {
+                font-size: 14px;
+                color: #424242;
+                padding: 20px;
+                font-weight: 400;
+            }
+            .profile-page .profile-header {
+                position: relative
+            }
+
+            .profile-page .profile-header .profile-image img {
+
+                width: 100px;
+
+                box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23)
+            }
+
+            .profile-page .profile-header .social-icon a {
+                margin: 0 5px
+            }
+
+            .profile-page .profile-sub-header {
+                min-height: 60px;
+                width: 100%
+            }
+
+            .profile-page .profile-sub-header ul.box-list {
+                display: inline-table;
+                table-layout: fixed;
+                width: 100%;
+                background: #eee
+            }
+
+            .profile-page .profile-sub-header ul.box-list li {
+                border-right: 1px solid #e0e0e0;
+                display: table-cell;
+                list-style: none
+            }
+
+            .profile-page .profile-sub-header ul.box-list li:last-child {
+                border-right: none
+            }
+
+            .profile-page .profile-sub-header ul.box-list li a {
+                display: block;
+                padding: 15px 0;
+                color: #424242
+            }
+        </style>
+    </head>
+
+    <body>
+        <!-- NAVBAR -->
+        <nav class="navbar py-4 sticky-top navbar-expand-lg navbar-dark box-shadow shadow" style="background-color: #1C1F23; ">
+            <!-- Navbar Title -->
+            <a class="navbar-brand" href="index.html" style="font-family: 'Poppins'; margin-left: 30px; color: rgb(12,94,215);">
+                <b>  
+                    Kurstir
+                </b>
+            </a>
+            <!-- Navbar Title END -->
+
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+        
+            <!-- Navbar Menu -->
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mx-auto" style="font-family: 'Poppins';">
+                    <!-- Menu 1 -->
+                    <a class="navbar-brand" style="font-family: 'Poppins'; margin-left: 30px; color: white (255, 252, 249);"></a>
+                        <a class="nav-link" href="index.html">Beranda</a>
+                    </li>
+                    <!-- Menu 1 END -->
+
+                    <!-- Menu 2 -->
+                    <li class="nav-item" style="margin-left:10px; margin-right:10px; color:white;"></li>"
+                        <a class="nav-link" href="#">Gabung Jadi Instruktur </span></a>
+                    </li>
+                    <!-- Menu 2 END -->
+
+                    <!-- Menu 3 -->
+                    <li class="nav-item" style="margin-left:10px; margin-right:10px;"></li>
+                        <a class="nav-link" href="#">Kursus</a>
+                    </li>
+                    <!-- Menu 3 END -->
+
+                    <!-- Menu 4 -->
+                    <li class="nav-item" style="margin-left:10px; margin-right:10px;"></li>
+                        <a class="nav-link" href="#">Paket</a>
+                    </li>
+                    <!-- Menu 4 END -->
+
+                    <!-- Menu 5 -->
+                    <li class="nav-item" style="margin-left:10px; margin-right:10px;color: white;"></li>
+                        <a class="nav-link" href="#">Tentang</a>
+                    </li>
+                    <!-- Menu 5 END -->
+
+                </ul>
+                <button type="button" class="btn btn-dark ml-auto" style="margin-right: 20px; color: white;" id="myBtn" data-toggle="modal" data-target="#modalLoginForm">Login</button>
+                <button type="button" class="btn btn-primary" style="color: white; margin-right: 20px;" id="myBtn" data-toggle="modal" data-target="#modalRegForm">Register</button>
+            </div>
+            <!-- Navbar Menu END -->
+        </nav>
+        <!-- NAVBAR END -->
+
+        <br>
+
+        <!-- Baris Satu -->
+        <div class="container profile-page">
+            <div class="row">
+                <!-- Item 1 -->
+                <div class="col">
+                    <div class="card profile-header">
+                        <div class="body">
+                            <div class="row">
+                                <div class="col-lg-4 col-md-4 col-12">
+                                    <div class="profile-image float-md-right"> <img src="img/list-instruktur/image  (12).jpeg" alt=""> </div>
+                                </div>
+                                <div class="col-lg-8 col-md-8 col-12">
+                                    <h4 class="m-t-0 m-b-0"><b>Samuel Edison</b></h4>
+                                    <hr>
+                                    <span class="job_post">Staff Kursus</span>
+                                    <br>
+                                    <p class="social-icon m-t-5 m-b-0">
+                                        <a><i class="fa fa-star" style="color: gold;"></i></a>
+                                        <a><i class="fa fa-star" style="color: gold;"></i></a>
+                                        <a><i class="fa fa-star" style="color: gold;"></i></a>
+                                        <a><i class="fa fa-star" style="color: black;"></i></a>
+                                        <a><i class="fa fa-star" style="color: black;"></i></a>
+                                        <a><i class="fa fa-phone" style="color: black; float: right;"></i></a>
+                                        <a><i class="fa fa-comments" style="color: black; float: right; margin-right: 10px;"></i></a>
+                                    </p>
+                                </div>                
+                            </div>
+                        </div>                    
+                    </div>
+                </div>
+                <!-- Item 2 -->
+                <div class="col">
+                    <div class="card profile-header">
+                        <div class="body">
+                            <div class="row">
+                                <div class="col-lg-4 col-md-4 col-12">
+                                    <div class="profile-image float-md-right"> <img src="img/list-instruktur/image  (1).jpeg" alt=""> </div>
+                                </div>
+                                <div class="col-lg-8 col-md-8 col-12">
+                                    <h4 class="m-t-0 m-b-0"><b>Christopher Eriksen</b></h4>
+                                    <hr>
+                                    <span class="job_post">Instruktur</span>
+                                    <br>
+                                    <p class="social-icon m-t-5 m-b-0">
+                                        <a><i class="fa fa-star" style="color: gold;"></i></a>
+                                        <a><i class="fa fa-star" style="color: gold;"></i></a>
+                                        <a><i class="fa fa-star" style="color: gold;"></i></a>
+                                        <a><i class="fa fa-star" style="color: gold;"></i></a>
+                                        <a><i class="fa fa-star" style="color: black;"></i></a>
+                                        <a><i class="fa fa-phone" style="color: black; float: right;"></i></a>
+                                        <a><i class="fa fa-comments" style="color: black; float: right; margin-right: 10px;"></i></a>
+                                    </p>
+                                </div>                  
+                            </div>
+                        </div>                    
+                    </div>
+                </div>
+                <!-- Item 3 -->
+                <div class="col">
+                    <div class="card profile-header">
+                        <div class="body">
+                            <div class="row">
+                                <div class="col-lg-4 col-md-4 col-12">
+                                    <div class="profile-image float-md-right"> <img src="img/list-instruktur/image  (2).jpeg" alt=""> </div>
+                                </div>
+                                <div class="col-lg-8 col-md-8 col-12">
+                                    <h4 class="m-t-0 m-b-0"><b>Vanessa Christin</b></h4>
+                                    <hr>
+                                    <span class="job_post">Driver</span>
+                                    <br>
+                                    <p class="social-icon m-t-5 m-b-0">
+                                        <a><i class="fa fa-star" style="color: gold;"></i></a>
+                                        <a><i class="fa fa-star" style="color: gold;"></i></a>
+                                        <a><i class="fa fa-star" style="color: black;"></i></a>
+                                        <a><i class="fa fa-star" style="color: black;"></i></a>
+                                        <a><i class="fa fa-star" style="color: black;"></i></a>
+                                        <a><i class="fa fa-phone" style="color: black; float: right;"></i></a>
+                                        <a><i class="fa fa-comments" style="color: black; float: right; margin-right: 10px;"></i></a>
+                                    </p>
+                                </div>                
+                            </div>
+                        </div>                    
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+        <!-- Baris 2 -->
+        <div class="container profile-page">
+            <div class="row">
+                <!-- Item 1 -->
+                <div class="col">
+                    <div class="card profile-header">
+                        <div class="body">
+                            <div class="row">
+                                <div class="col-lg-4 col-md-4 col-12">
+                                    <div class="profile-image float-md-right"> <img src="img/list-instruktur/image  (3).jpeg" alt=""> </div>
+                                </div>
+                                <div class="col-lg-8 col-md-8 col-12">
+                                    <h4 class="m-t-0 m-b-0"><b>Christian Anders</b></h4>
+                                    <hr>
+                                    <span class="job_post">Staff Kursus</span>
+                                    <br>
+                                    <p class="social-icon m-t-5 m-b-0">
+                                        <a><i class="fa fa-star" style="color: gold;"></i></a>
+                                        <a><i class="fa fa-star" style="color: gold;"></i></a>
+                                        <a><i class="fa fa-star" style="color: gold;"></i></a>
+                                        <a><i class="fa fa-star" style="color: gold;"></i></a>
+                                        <a><i class="fa fa-star" style="color: gold;"></i></a>
+                                        <a><i class="fa fa-phone" style="color: black; float: right;"></i></a>
+                                        <a><i class="fa fa-comments" style="color: black; float: right; margin-right: 10px;"></i></a>
+                                    </p>
+                                </div>                
+                            </div>
+                        </div>                    
+                    </div>
+                </div>
+                <!-- Item 2 -->
+                <div class="col">
+                    <div class="card profile-header">
+                        <div class="body">
+                            <div class="row">
+                                <div class="col-lg-4 col-md-4 col-12">
+                                    <div class="profile-image float-md-right"> <img src="img/list-instruktur/image  (4).jpeg" alt=""> </div>
+                                </div>
+                                <div class="col-lg-8 col-md-8 col-12">
+                                    <h4 class="m-t-0 m-b-0"><b>Jessica Anastasia</b></h4>
+                                    <hr>
+                                    <span class="job_post">Instruktur</span>
+                                    <br>
+                                    <p class="social-icon m-t-5 m-b-0">
+                                        <a><i class="fa fa-star" style="color: gold;"></i></a>
+                                        <a><i class="fa fa-star" style="color: gold;"></i></a>
+                                        <a><i class="fa fa-star" style="color: gold;"></i></a>
+                                        <a><i class="fa fa-star" style="color: black;"></i></a>
+                                        <a><i class="fa fa-star" style="color: black;"></i></a>
+                                        <a><i class="fa fa-phone" style="color: black; float: right;"></i></a>
+                                        <a><i class="fa fa-comments" style="color: black; float: right; margin-right: 10px;"></i></a>
+                                    </p>
+                                </div>                
+                            </div>
+                        </div>                    
+                    </div>
+                </div>
+                <!-- Item 3 -->
+                <div class="col">
+                    <div class="card profile-header">
+                        <div class="body">
+                            <div class="row">
+                                <div class="col-lg-4 col-md-4 col-12">
+                                    <div class="profile-image float-md-right"> <img src="img/list-instruktur/image  (5).jpeg" alt=""> </div>
+                                </div>
+                                <div class="col-lg-8 col-md-8 col-12">
+                                    <h4 class="m-t-0 m-b-0"><b>Marcus Reynaldi</b></h4>
+                                    <hr>
+                                    <span class="job_post">Staff Kursus</span>
+                                    <br>
+                                    <p class="social-icon m-t-5 m-b-0">
+                                        <a><i class="fa fa-star" style="color: gold;"></i></a>
+                                        <a><i class="fa fa-star" style="color: gold;"></i></a>
+                                        <a><i class="fa fa-star" style="color: gold;"></i></a>
+                                        <a><i class="fa fa-star" style="color: black;"></i></a>
+                                        <a><i class="fa fa-star" style="color: black;"></i></a>
+                                        <a><i class="fa fa-phone" style="color: black; float: right;"></i></a>
+                                        <a><i class="fa fa-comments" style="color: black; float: right; margin-right: 10px;"></i></a>
+                                    </p>
+                                </div>                
+                            </div>
+                        </div>                    
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+        <!-- Baris 3 -->
+        <div class="container profile-page">
+            <div class="row">
+                <!-- Item 1 -->
+                <div class="col">
+                    <div class="card profile-header">
+                        <div class="body">
+                            <div class="row">
+                                <div class="col-lg-4 col-md-4 col-12">
+                                    <div class="profile-image float-md-right"> <img src="img/list-instruktur/image  (6).jpeg" alt=""> </div>
+                                </div>
+                                <div class="col-lg-8 col-md-8 col-12">
+                                    <h4 class="m-t-0 m-b-0"><b>Erika Melaney</b></h4>
+                                    <hr>
+                                    <span class="job_post">Staff Kursus</span>
+                                    <br>
+                                    <p class="social-icon m-t-5 m-b-0">
+                                        <a><i class="fa fa-star" style="color: gold;"></i></a>
+                                        <a><i class="fa fa-star" style="color: gold;"></i></a>
+                                        <a><i class="fa fa-star" style="color: black;"></i></a>
+                                        <a><i class="fa fa-star" style="color: black;"></i></a>
+                                        <a><i class="fa fa-star" style="color: black;"></i></a>
+                                        <a><i class="fa fa-phone" style="color: black; float: right;"></i></a>
+                                        <a><i class="fa fa-comments" style="color: black; float: right; margin-right: 10px;"></i></a>
+                                    </p>
+                                </div>                
+                            </div>
+                        </div>                    
+                    </div>
+                </div>
+                <!-- Item 2 -->
+                <div class="col">
+                    <div class="card profile-header">
+                        <div class="body">
+                            <div class="row">
+                                <div class="col-lg-4 col-md-4 col-12">
+                                    <div class="profile-image float-md-right"> <img src="img/list-instruktur/image  (7).jpeg" alt=""> </div>
+                                </div>
+                                <div class="col-lg-8 col-md-8 col-12">
+                                    <h4 class="m-t-0 m-b-0"><b>Marissa Cloe</b></h4>
+                                    <hr>
+                                    <span class="job_post">Driver</span>
+                                    <br>
+                                    <p class="social-icon m-t-5 m-b-0">
+                                        <a><i class="fa fa-star" style="color: gold;"></i></a>
+                                        <a><i class="fa fa-star" style="color: gold;"></i></a>
+                                        <a><i class="fa fa-star" style="color: gold;"></i></a>
+                                        <a><i class="fa fa-star" style="color: gold;"></i></a>
+                                        <a><i class="fa fa-star" style="color: gold;"></i></a>
+                                        <a><i class="fa fa-phone" style="color: black; float: right;"></i></a>
+                                        <a><i class="fa fa-comments" style="color: black; float: right; margin-right: 10px;"></i></a>
+                                    </p>
+                                </div>                
+                            </div>
+                        </div>                    
+                    </div>
+                </div>
+                <!-- Item 3 -->
+                <div class="col">
+                    <div class="card profile-header">
+                        <div class="body">
+                            <div class="row">
+                                <div class="col-lg-4 col-md-4 col-12">
+                                    <div class="profile-image float-md-right"> <img src="img/list-instruktur/image  (8).jpeg" alt=""> </div>
+                                </div>
+                                <div class="col-lg-8 col-md-8 col-12">
+                                    <h4 class="m-t-0 m-b-0"><b>Jack Larsson</b></h4>
+                                    <hr>
+                                    <span class="job_post">Staff Kursus</span>
+                                    <br>
+                                    <p class="social-icon m-t-5 m-b-0">
+                                        <a><i class="fa fa-star" style="color: gold;"></i></a>
+                                        <a><i class="fa fa-star" style="color: gold;"></i></a>
+                                        <a><i class="fa fa-star" style="color: gold;"></i></a>
+                                        <a><i class="fa fa-star" style="color: gold;"></i></a>
+                                        <a><i class="fa fa-star" style="color: gold;"></i></a>
+                                        <a><i class="fa fa-phone" style="color: black; float: right;"></i></a>
+                                        <a><i class="fa fa-comments" style="color: black; float: right; margin-right: 10px;"></i></a>
+                                    </p>
+                                </div>                
+                            </div>
+                        </div>                    
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <!-- Baris 4 -->
+        <div class="container profile-page">
+            <div class="row">
+                <!-- Item 1 -->
+                <div class="col">
+                    <div class="card profile-header">
+                        <div class="body">
+                            <div class="row">
+                                <div class="col-lg-4 col-md-4 col-12">
+                                    <div class="profile-image float-md-right"> <img src="img/list-instruktur/image  (9).jpeg" alt=""> </div>
+                                </div>
+                                <div class="col-lg-8 col-md-8 col-12">
+                                    <h4 class="m-t-0 m-b-0"><b>Michael Antolin</b></h4>
+                                    <hr>
+                                    <span class="job_post">Driver</span>
+                                    <br>
+                                    <p class="social-icon m-t-5 m-b-0">
+                                        <a><i class="fa fa-star" style="color: gold;"></i></a>
+                                        <a><i class="fa fa-star" style="color: gold;"></i></a>
+                                        <a><i class="fa fa-star" style="color: gold;"></i></a>
+                                        <a><i class="fa fa-star" style="color: gold;"></i></a>
+                                        <a><i class="fa fa-star" style="color: black;"></i></a>
+                                        <a><i class="fa fa-phone" style="color: black; float: right;"></i></a>
+                                        <a><i class="fa fa-comments" style="color: black; float: right; margin-right: 10px;"></i></a>
+                                    </p>
+                                </div>                
+                            </div>
+                        </div>                    
+                    </div>
+                </div>
+                <!-- Item 2 -->
+                <div class="col">
+                    <div class="card profile-header">
+                        <div class="body">
+                            <div class="row">
+                                <div class="col-lg-4 col-md-4 col-12">
+                                    <div class="profile-image float-md-right"> <img src="img/list-instruktur/image  (10).jpeg" alt=""> </div>
+                                </div>
+                                <div class="col-lg-8 col-md-8 col-12">
+                                    <h4 class="m-t-0 m-b-0"><b>Celine Angeline</b></h4>
+                                    <hr>
+                                    <span class="job_post">Driver</span>
+                                    <br>
+                                    <p class="social-icon m-t-5 m-b-0">
+                                        <a><i class="fa fa-star" style="color: gold;"></i></a>
+                                        <a><i class="fa fa-star" style="color: gold;"></i></a>
+                                        <a><i class="fa fa-star" style="color: gold;"></i></a>
+                                        <a><i class="fa fa-star" style="color: black;"></i></a>
+                                        <a><i class="fa fa-star" style="color: black;"></i></a>
+                                        <a><i class="fa fa-phone" style="color: black; float: right;"></i></a>
+                                        <a><i class="fa fa-comments" style="color: black; float: right; margin-right: 10px;"></i></a>
+                                    </p>
+                                </div>                
+                            </div>
+                        </div>                    
+                    </div>
+                </div>
+                <!-- Item 3 -->
+                <div class="col">
+                    <div class="card profile-header">
+                        <div class="body">
+                            <div class="row">
+                                <div class="col-lg-4 col-md-4 col-12">
+                                    <div class="profile-image float-md-right"> <img src="img/list-instruktur/image  (11).jpeg" alt=""> </div>
+                                </div>
+                                <div class="col-lg-8 col-md-8 col-12">
+                                    <h4 class="m-t-0 m-b-0"><b>Michelle Andriani</b></h4>
+                                    <hr>
+                                    <span class="job_post">Staff Kursus</span>
+                                    <br>
+                                    <p class="social-icon m-t-5 m-b-0">
+                                        <a><i class="fa fa-star" style="color: gold;"></i></a>
+                                        <a><i class="fa fa-star" style="color: gold;"></i></a>
+                                        <a><i class="fa fa-star" style="color: gold;"></i></a>
+                                        <a><i class="fa fa-star" style="color: black;"></i></a>
+                                        <a><i class="fa fa-star" style="color: black;"></i></a>
+                                        <a><i class="fa fa-phone" style="color: black; float: right;"></i></a>
+                                        <a><i class="fa fa-comments" style="color: black; float: right; margin-right: 10px;"></i></a>
+                                    </p>
+                                </div>                
+                            </div>
+                        </div>                    
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+        
+
+        
+        <!-- Option 1: Bootstrap Bundle with Popper -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+    </body>
+</html>
